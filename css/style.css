@@ -1,0 +1,49 @@
+:root {
+  --a-color: #b99b00;
+  --b-color: #1c273e;
+  --c-color: #dddcda;
+  --d-color: #646464;
+  /* --ja-font: 'Noto Serif JP', serif; */
+  --ja-font: 'Shippori Mincho', serif;
+  --en-font: 'Lobster Two', cursive;
+}
+html,body,h1,h2,h3,h4,h5,h6,p,span,ul,li,a,dd,dt,dl,input,textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  font-family: var(--ja-font);
+  font-size: 16px;
+  line-height: 1.4;
+  /* background-color: var(--c-color); */
+}
+a {
+  text-decoration: none;
+}
+img {
+	vertical-align: top;
+}
+li {
+  list-style-type: none;
+}
+.pc {
+	display: block !important;
+}
+.sp {
+	display: none !important;
+}
+
+@media all and (max-width: 768px) {
+	.pc {
+		display: none !important;
+	}
+	.sp {
+		display: block !important;
+	}
+}
+
+.overflow {
+  overflow: hidden;
+} 
