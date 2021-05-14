@@ -5,13 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Espace Property Development Inc.</title>
+  <link rel="stylesheet" href="css/lightbox.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+  <!-- <div class="pointer"></div> -->
+  <div class="opening-animation">
+    <div class="index01"><div class="index01-top"></div><div class="index01-bottom"></div></div>
+    <div class="index02"><div class="index02-top"></div><div class="index02-bottom"></div></div>
+    <div class="line"></div>
+  </div>
   <div class="overflow">
     <header>
       <div class="logo"><a href=""><img src="img/logo.png" alt=""></a></div>
@@ -61,6 +72,7 @@
                 空間こそ、体と心の憩うところであり、最も拘るところなのです。
               </p>
             </div>
+            <div class="overlay concept-overlay"></div>
           </div>
         </div>
       </section>
@@ -69,17 +81,18 @@
           <div class="sec-contents collection-contents">
             <div class="inner-sec">
               <h2 class="content-head">Collection</h2>
-              <div class="wrap">
-                <div class="item"><img class="aaa" src="img/p_image01.jpeg" alt=""></div>
-                <div class="item"><img class="aaa" src="img/p_image02.jpeg" alt=""></div>
-                <div class="item"><img class="aaa" src="img/p_image03.jpeg" alt=""></div>
-                <div class="item"><img class="aaa" src="img/p_image02.jpeg" alt=""></div>
-                <div class="item"><img class="aaa" src="img/p_image01.jpeg" alt=""></div>
-                <div class="item"><img class="aaa" src="img/p_image03.jpeg" alt=""></div>
-                <div class="item"><img class="aaa" src="img/p_image01.jpeg" alt=""></div>
-                <div class="item"><img class="aaa" src="img/p_image02.jpeg" alt=""></div>          
+              <div class="wrap collection-wrap">
+                <div class="item"><a href="img/image01.jpeg" data-lightbox="collection-1" data-title="caption1"><img src="img/image01.jpeg" alt=""></a></div>
+                <div class="item"><a href="img/image02.jpeg" data-lightbox="collection-2" data-title="caption2"><img src="img/image02.jpeg" alt=""></a></div>
+                <div class="item"><a href="img/image03.jpeg" data-lightbox="collection-3" data-title="caption3"><img src="img/image03.jpeg" alt=""></a></div>
+                <div class="item"><a href="img/image04.jpeg" data-lightbox="collection-4" data-title="caption4"><img src="img/image04.jpeg" alt=""></a></div>    
+                <div class="item"><a href="img/image06.jpeg" data-lightbox="collection-6" data-title="caption6"><img src="img/image06.jpeg" alt=""></a></div>    
+                <div class="item"><a href="img/image07.jpeg" data-lightbox="collection-7" data-title="caption7"><img src="img/image07.jpeg" alt=""></a></div>    
+                <div class="item"><a href="img/image08.jpeg" data-lightbox="collection-8" data-title="caption8"><img src="img/image09.jpeg" alt=""></a></div>    
+                <div class="item"><a href="img/image09.jpeg" data-lightbox="collection-9" data-title="caption9"><img src="img/image08.jpeg" alt=""></a></div>    
               </div>
             </div>
+            <div class="overlay collection-overlay"></div>
           </div>
           <div class="sec-image collection-image"></div>
         </div>
@@ -90,12 +103,12 @@
             <h2 class="content-head">Facility</h2>
             <p>トレーニングジムやスイミングプール、エクササイズやヨガができるスペースなどお客様の要望に合わせた空間を提供します。<br>各分野の専門家たちと協議し拘り抜いた空間ですをお楽しみください。</p>
             <ul class="facility-items">
-              <li><img src="img/p_image01.jpeg" alt=""></li>
-              <li><img src="img/p_image03.jpeg" alt=""></li>
-              <li><img src="img/p_image01.jpeg" alt=""></li>
-              <li><img src="img/p_image03.jpeg" alt=""></li>
-              <li><img src="img/p_image01.jpeg" alt=""></li>
-              <li><img src="img/p_image03.jpeg" alt=""></li>
+              <li><img src="img/image10.jpeg" alt=""></li>
+              <li><img src="img/image11.jpeg" alt=""></li>
+              <li><img src="img/image12.jpg" alt=""></li>
+              <li><img src="img/image13.jpg" alt=""></li>
+              <li><img src="img/image14.jpg" alt=""></li>
+              <li><img src="img/image15.jpg" alt=""></li>
             </ul>
           </div>
         </div>
@@ -106,16 +119,30 @@
             <h2 class="content-head">Progress</h2>
             <p>現在改築中のピルです。</p>
             <ul class="progress-items">
-              <li><img src="img/p_image01.jpeg" alt=""><span>aaa</span></li>
-              <li><img src="img/p_image03.jpeg" alt=""><span>aaa</span></li>
-              <li><img src="img/p_image01.jpeg" alt=""><span>aaa</span></li>
-              <li><img src="img/p_image03.jpeg" alt=""><span>aaa</span></li>
-              <li><img src="img/p_image01.jpeg" alt=""><span>aaa</span></li>
-              <li><img src="img/p_image03.jpeg" alt=""><span>aaa</span></li>
-              <li><img src="img/p_image01.jpeg" alt=""><span>aaa</span></li>
-              <li><img src="img/p_image03.jpeg" alt=""><span>aaa</span></li>
-              <li><img src="img/p_image01.jpeg" alt=""><span>aaa</span></li>
-              <li><img src="img/p_image03.jpeg" alt=""><span>aaa</span></li>
+              <li>
+                <a href="img/p_image01.jpeg" data-lightbox="progress-1" data-title="caption1"><img src="img/p_image01.jpeg" alt=""></a><span>2021/5/11</span>
+                <a href="img/p_image02.jpeg" data-lightbox="progress-1" data-title="caption1"></a>
+              </li>
+              <li>
+                <a href="img/p_image03.jpeg" data-lightbox="progress-2" data-title="caption2"><img src="img/p_image03.jpeg" alt=""></a><span>2021/3/20</span>
+                <a href="img/p_image06.jpeg" data-lightbox="progress-2" data-title="caption2"></a>
+              </li>
+              <li>
+                <a href="img/p_image04.jpeg" data-lightbox="progress-3" data-title="caption3"><img src="img/p_image04.jpeg" alt=""></a><span>2021/1/10</span>
+                <a href="img/p_image07.jpeg" data-lightbox="progress-3" data-title="caption3"></a>
+              </li>
+              <li>
+                <a href="img/p_image05.jpeg" data-lightbox="progress-4" data-title="caption4"><img src="img/p_image05.jpeg" alt=""></a><span>2020/10/30</span>
+                <a href="img/p_image09.jpeg" data-lightbox="progress-4" data-title="caption4"></a>
+              </li>
+              <li>
+                <a href="img/p_image08.jpeg" data-lightbox="progress-5" data-title="caption5"><img src="img/p_image08.jpeg" alt=""></a><span>2020/8/30</span>
+                <a href="img/p_image11.jpeg" data-lightbox="progress-5" data-title="caption5"></a>
+              </li>
+              <li>
+                <a href="img/p_image10.jpeg" data-lightbox="progress-6" data-title="caption6"><img src="img/p_image10.jpeg" alt=""></a><span>2020/5/17</span>
+                <a href="img/p_image12.jpeg" data-lightbox="progress-6" data-title="caption6"></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -125,25 +152,39 @@
           <div class="inner-sec inner-news">
             <h2 class="content-head">Newsletter</h2>
             <div class="news-wrap">
-              <div class="item">
-                <img class="aaa" src="img/p_image03.jpeg" alt="">
-                <p>A Garden</p>
+              <div class="news-topic">
+                <a href="#">
+                  <div class="news-item">
+                    <img src="img/image20.jpg" alt="">
+                    <p>Top Newsletter</p>
+                  </div>
+                </a>
               </div>
-              <div class="item">
-                <img class="aaa" src="img/p_image01.jpeg" alt="">
-                <p>B Garden</p>
-              </div>
-              <div class="item">
-                <img class="aaa" src="img/p_image02.jpeg" alt="">
-                <p>C Garden</p>
-              </div>
-              <div class="item">
-                <img class="aaa" src="img/p_image01.jpeg" alt="">
-                <p>D Garden</p>
-              </div>
-              <div class="item">
-                <img class="aaa" src="img/p_image03.jpeg" alt="">
-                <p>E Garden</p>
+              <div class="news-other">
+                <a href="#">
+                  <div class="news-item">
+                    <img src="img/image16.jpg" alt="">
+                    <p>A Newsletter</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="news-item">
+                    <img src="img/image17.jpg" alt="">
+                    <p>B Newsletter</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="news-item">
+                    <img src="img/image18.jpg" alt="">
+                    <p>C Newsletter</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="news-item">
+                    <img src="img/image19.jpg" alt="">
+                    <p>D Newsletter</p>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -158,7 +199,7 @@
           <div class="sec-contents">
             <div class="inner-sec">
               <h2 class="content-head">Contact</h2>
-              <div class="contact-form">
+              <form class="contact-form">
                 <label for="name"><span>*Name</span><input type="text" name="name" id="name"></label>
                 <label for="email"><span>*Email</span><input type="email" name="email" id="email"></label>
                 <label for="tel"><span>*Phone Number</span><input type="text" name="tel" id="tel"></label>
@@ -192,8 +233,9 @@
                 </div>
                 <label for="check" class="checkbox"><input type="checkbox" id="check"><span>プライバシーポリシーに同意する</span></label>
                 <div class="submit"><input type="submit" value="on submit"></div>
-              </div>
+              </form>
             </div>
+            <div class="overlay contact-overlay"></div>
           </div>
         </div>
       </section>
@@ -223,10 +265,14 @@
                   <td>000-0000-0000</td>
                 </tr>
               </table>
+              <a href="#" class="map-link">
+                <p>Google Map</p>
+              </a>
             </div>
+            <div class="overlay campany-overlay"></div>
           </div>
           <div class="sec-image google">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.2810555516157!2d139.47377071519674!3d35.52205164629292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f8efc040b1fd%3A0x6822a41054b6267d!2z44CSMTk0LTAwMDIg5p2x5Lqs6YO955S655Sw5biC5Y2X44Gk44GP44GX6YeO77yU5LiB55uu77yZ4oiS77ySIOOCsOODqeODs-ODieOCpeODvOODq-WNl-OBpOOBj-OBl-mHjg!5e0!3m2!1sja!2sjp!4v1620800459186!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103860.53660636929!2d139.3181110082748!3d35.56254849408314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018fda2e1f2eef1%3A0xbc725527dbdafeb2!2z5p2x5Lqs6YO955S655Sw5biC!5e0!3m2!1sja!2sjp!4v1620968841722!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
       </section>
@@ -237,6 +283,19 @@
       </footer>
     </main>
   </div>
+  <!-- <script type="text/javascript">
+    $(document).mousemove(function(e) {
+      $('.pointer').css({left: e.pageX, top: e.pageY})
+    })
+    $("a, .menu, .submit").on({
+      "mouseenter": function() {
+        $('.pointer').addClass("hover");
+      },
+      "mouseleave": function() {
+        $('.pointer').removeClass("hover");
+      }
+    });
+  </script> -->
   <script src="js/main.js"></script>
   <script src="js/gsap.js"></script>
 </body>

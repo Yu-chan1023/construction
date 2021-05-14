@@ -1,106 +1,66 @@
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-// ScrollTrigger.matchMedia({
-//   "(min-width: 769px)": function() {
-//     tl = new TimelineMax();
-//     tl.staggerTo('.loading-logo span', 4, {opacity: 1}, 0.5)
-//       .staggerTo('.loading-logo span', 1 , {margin: 0, delay: '-2'})
-//       .to('.overlay', 1, {width: "100%"})
-//       .to('.overlay img', 1, {width: "50%"})
-//       .to('.loading-logo', .5, {display: 'none'})
-//       .to('.loading-wrapper', 1, {width: 0})
-//       .from('header', 1.5, {x: '-300', ease: 'back.out(3)'})
-//       .staggerFrom('.top h1 span', 0.85 , {x: '-200', rotateZ: 180, ease: Power2.easeOut}, 0.05)
-//       .to('body', 1, {overflow: 'auto'});
-//   },
-//   "(max-width: 768px)": function() {
-//     tl = new TimelineMax();
-//     tl.staggerTo('.loading-logo span', 4, {opacity: 1}, 0.5)
-//       .staggerTo('.loading-logo span', 1 , {margin: 0, delay: '-2'})
-//       .to('.overlay', 1, {width: "100%"})
-//       .to('.overlay img', 1, {width: "50%"})
-//       .to('.loading-logo', .5, {display: 'none'})
-//       .to('.loading-wrapper', 1, {width: 0})
-//       .from('.menu-btn', 1, {x: '-100', ease: 'back.out(3)'})
-//       .staggerFrom('.top h1 span', 0.85 , {x: '-200', rotateZ: 180, ease: Power2.easeOut}, 0.05)
-//       .to('body', 1, {overflow: 'auto'});
-//   }
-// })
+opening = new TimelineMax();
+opening.addLabel('opening')
+       .to('.line', 1, {width: '100%'}, 'opening')
+       .to('.line', 0.1, {opacity: 0}, 'opening+=0.9')
+       .to('.index02 .index02-top', 1, {height: 0}, 'opening+=1')
+       .to('.index02 .index02-bottom', 1, {height: 0}, 'opening+=1')
+       .to('.index01 .index01-top', 1, {height: 0, opacity: 0, rotateZ: '-10deg'}, 'opening+=1.2')
+       .to('.index01 .index01-bottom', 1, {height: 0, opacity: 0, rotateZ: '-10deg'}, 'opening+=1.2')
+       .from('.overflow', 2, {opacity: 0}, 'opening+=1.2')
 
-// gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.top',
-//     start: 'top bottom',
-//     end: 'bottom top',
-//     scrub: true,
-//   }
-// })
-// .from(".para0", {y: '100px'})
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.contact',
+    start: 'top bottom',
+  }
+})
 
-// ScrollTrigger.matchMedia({
-//   "(min-width: 769px)": function() {
-//     gsap.timeline({
-//       scrollTrigger: {
-//         trigger: '.images',
-//         start: 'top bottom',
-//         end: 'bottom top',
-//         scrub: true,
-//       }
-//     })
-//     .from(".para", {y: '100px'})
-//     .from(".para2", {y: '100px'})
-//     .from(".para3", {y: '100px'})
-//   },
-//   "(max-width: 768px)": function() {
-//     gsap.timeline({
-//       scrollTrigger: {
-//         trigger: '.images',
-//         start: 'top bottom',
-//         end: 'bottom 70%',
-//         scrub: true,
-//       }
-//     })
-//     .from(".para", {y: '70px'})
-//     .from(".para2", {y: '30px'})
-//     .from(".para3", {y: '30px'})
-//   }
-// })
+.to(".contact-overlay", 2, {width: 0, rotateZ: '0deg'})
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.campany',
+    start: 'top bottom',
+  }
+})
 
-// gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.product',
-//     start: 'top bottom',
-//     end: 'bottom 70%',
-//     scrub: true,
-//   }
-// })
-// .from(".para4", {xPercent: '-200'})
-// .from(".para5", {xPercent: '200'})
+.to(".campany-overlay", 2, {width: 0, rotateZ: '0deg'})
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.collection',
+    start: 'top bottom',
+  }
+})
+.to(".collection-overlay", 2, {width: 0, rotateZ: '0deg'})
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.concept',
+    start: 'top bottom',
+  }
+})
+.to(".concept-overlay", 2, {width: 0, rotateZ: '0deg'})
 
-// gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.access',
-//     start: 'top bottom',
-//     end: 'bottom 70%',
-//     scrub: true,
-//   }
-// })
-// .from(".para6", {y: '100'})
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.news',
+    start: 'top bottom',
+  }
+})
+.from(".news", 1, {opacity: 0, y: '50px'})
 
-// gsap.timeline({
-//   scrollTrigger: {
-//     trigger: 'footer',
-//     start: 'top bottom',
-//     end: 'bottom bottom',
-//     scrub: true,
-//   }
-// })
-// .from("footer", {y: '-100'})
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.facility',
+    start: 'top bottom',
+  }
+})
+.staggerFrom(".facility-items li", 1.8, {opacity: 0}, 0.3)
 
-
-//   const menu = document.getElementById('menu-btn');
-//   const list = document.getElementById('menu-lists');
-//   menu.addEventListener('click', () => {
-//     const btn = gsap.timeline();
-//     btn.to(list, 1, {xPercent: 100}) 
-//   })
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.progress',
+    start: 'top bottom',
+  }
+})
+.staggerFrom(".progress-items li", 1.8, {opacity: 0}, 0.3)
