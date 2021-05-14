@@ -3,7 +3,6 @@
   --b-color: #1c273e;
   --c-color: #dddcda;
   --d-color: #646464;
-  /* --ja-font: 'Noto Serif JP', serif; */
   --ja-font: 'Shippori Mincho', serif;
   --en-font: 'Lobster Two', cursive;
 }
@@ -17,10 +16,11 @@ body {
   font-family: var(--ja-font);
   font-size: 16px;
   line-height: 1.4;
-  /* background-color: var(--c-color); */
+  /* cursor: none; */
 }
 a {
   text-decoration: none;
+  /* cursor: none; */
 }
 img {
 	vertical-align: top;
